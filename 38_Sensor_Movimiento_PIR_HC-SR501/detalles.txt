@@ -1,0 +1,3 @@
+VCC es la entrada de tension alsensor
+OUT es la salida de señal al arduino
+GND es tierra
