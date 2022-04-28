@@ -1,0 +1,120 @@
+[
+    {
+        "id": "73dcf854fc0df24f",
+        "type": "tab",
+        "label": "ESPduino",
+        "disabled": false,
+        "info": "Tutorial basico de MQTT en ESPduino",
+        "env": []
+    },
+    {
+        "id": "b2d10124a6306187",
+        "type": "mqtt in",
+        "z": "73dcf854fc0df24f",
+        "name": "ESPduino01",
+        "topic": "ESPduinoTopic/input1",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "60b27e806876604e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 120,
+        "wires": [
+            [
+                "fe0ec38a598ee1cc"
+            ]
+        ]
+    },
+    {
+        "id": "fe0ec38a598ee1cc",
+        "type": "debug",
+        "z": "73dcf854fc0df24f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "244a10009215bf66",
+        "type": "mqtt out",
+        "z": "73dcf854fc0df24f",
+        "name": "",
+        "topic": "ESPduinoTopic/output1",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "60b27e806876604e",
+        "x": 510,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "e0106cded55db563",
+        "type": "inject",
+        "z": "73dcf854fc0df24f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 200,
+        "wires": [
+            [
+                "244a10009215bf66"
+            ]
+        ]
+    },
+    {
+        "id": "60b27e806876604e",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.21",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    }
+]

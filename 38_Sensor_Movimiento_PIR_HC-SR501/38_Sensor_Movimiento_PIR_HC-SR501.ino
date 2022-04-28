@@ -1,7 +1,7 @@
 //const byte led = 13; //led del circuito
 const byte sensorPir = 14; // sensor en el lugar 14
 int estado = LOW; // no hay movimiento por defecto entonces hay nivel bajo
-int valor = 0; //guardar el valor entregado por el sensor
+int valor = 0; //guardar el valor entregado por el sensor 1
 
 void setup() {
   //pinMode(led, OUTPUT);
